@@ -1,2 +1,7 @@
 # Web-Scraping Pesquisa de Preco
- Neste projeto criei um robô que procura preços de produto da minha preferência com a faixa de preço da minha preferência para treinar o web scraping
+# Objetivo do Projeto:
+  Criar um robô que procura preços de um determinado produto em uma determinada faixa de preço.
+# Estrutura do Código:
+  Para começar organizei minhas ideias comentando a primeira linha de código de cada célula de o que deveria ser feito
+  
+ 
