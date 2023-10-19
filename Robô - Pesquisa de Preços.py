@@ -33,10 +33,6 @@
 # - Enviar um e-mail para o seu e-mail (no caso da empresa seria para a área de compras por exemplo) com a notificação e a tabela com os itens e preços encontrados, junto com o link de compra. (Vou usar o e-mail pythonimpressionador@gmail.com. Use um e-mail seu para fazer os testes para ver se a mensagem está chegando)
 
 # 1 Passo - Criar um Navegador 
-
-# In[12]:
-
-
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -45,40 +41,9 @@ import time
 
 
 # 2 Passo - Importar/visualizar base de dados
-
-# In[13]:
-
-
 import pandas as pd 
 tabela_produtos = pd.read_excel('buscas.xlsx')
 display(tabela_produtos)
-
-
-# 3 Passo - Fazer um for para cada item e produto da base de dados 
-
-# In[14]:
-
-
-#entrar no google
-
-
-#pesquisar pelo produto 
-
-
-#entrar na aba shopping
-#procurar produto no google shopping
-#verificar se o produto se encontra dentro da faixa de preço
-#procurar produto no buscapé 
-#verificar se o produto se encontra dentro da faixa de preço no buscapé
-
-#salvar as ofertas boas
-#exportar pro excel
-#enviar pro email
-
-
-# Definindo a função do google shopping e buscapé
-
-# In[15]:
 
 
 #funcao google
@@ -147,20 +112,11 @@ def busca_google_shopping(nav, produto, termos_banidos, preco_minimo, preco_maxi
 
             
     return lista_ofertas
-    
-
-
-# In[16]:
 
 
 nav = webdriver.Chrome()
 lista_ofertas_google = busca_google_shopping(nav, produto, termos_banidos, preco_minimo, preco_maximo)
 display(lista_ofertas_google)
-
-
-# Continuação do código
-
-# In[17]:
 
 
 tabela_ofertas = pd.DataFrame()
